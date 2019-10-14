@@ -1,7 +1,7 @@
 include ./mixins.pug
 
 <!DOCTYPE html>
-html(lang="en")
+html(lang="ru")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
@@ -10,6 +10,124 @@ html(lang="en")
   body
     .wrapper
       .maincontent
-        +image('content/user.jpg', 'user-pic')
-        +icon('link', 'link-class')
-        .icon-bg
+        .wrapper-mountain
+          section(id='Main').welcome.container
+            include ./components/header.pug
+            h4.welcome__title Личный сайт веб&nbsp;разработчика
+            h1.welcome__main-title Вадим Монастырский 
+            include ./components/welcome-scroll
+          section(id='About').about.container
+            .about-content
+              include ./components/about-info.pug
+              include ./components/about-desc.pug
+        section.skills(id='Skills').container
+          h2.skills-content__title.section-title Чем я могу быть полезен Вам
+          .skills-content
+            .skills-content__text.text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+            .skills-content__frontend 
+              h3.skills-content__frontend-title Front-end
+              .skills-content__circles
+                include ./components/skill-circle.pug
+                +skillCircle('HTML5','50')
+                +skillCircle('CSS3','25')
+                +skillCircle('JavaScript','75')
+                +skillCircle('Jquery и Vue.js','20')
+            .skills-content__workflow 
+              h3.skills-content__workflow-title Workflow
+              .skills-content__circles
+                +skillCircle('Git','15')
+                +skillCircle('Terminal','25')
+                +skillCircle('Gulp','50')
+                +skillCircle('Webpack','32')
+        section.work(id='Working').container
+          h2.work__title.section-title Мои работы
+          .work-content
+            .work-preview
+              .work-preview__main
+                +image('content/work/1.jpg', 'work-preview__main-pic')
+                ul.work-preview__list
+                  li.work-preview__item 
+                    +image('content/work/2.jpg','work-preview__litle-pic')
+                  li.work-preview__item 
+                    +image('content/work/3.jpg','work-preview__litle-pic')
+                  li.work-preview__item 
+                    +image('content/work/4.jpg','work-preview__litle-pic')
+                  li.work-preview__item 
+                    +image('content/work/5.jpg','work-preview__litle-pic')
+              .work-preview__buttons
+                button.work-preview__prev
+                  +icon('arrow','work-preview__prev-btn')
+                button.work-preview__next
+                  +icon('arrow','work-preview__next-btn')
+            .work-info
+              .info
+                span.info__tech HTML
+                span.info__tech CSS
+                span.info__tech Javascript
+                h3.info__title Сайт школы образования
+                p.info__desc.text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                a(href='https://loftschool.com/' target='_black').info__link Посмотреть сайт
+        .wrapper-budda
+          section(id='Reviews').reviews.container
+            h2.reviews__title.section-title Что обо мне говорят
+            .reviews__controls
+              button.reviews__button.reviews__button-prev
+              button.reviews__button.reviews__button-next
+            .reviews-content 
+              .reviews__item
+                blockquote.reviews__text.text Этот парень проходил обучение веб&nbsp;разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
+                .reviews__person
+                  .reviews__avatar
+                    .reviews__photo
+                      +image("content/reviews/dima.jpeg",'reviews__pic')
+                  .reviews__person-info
+                    .reviews__name Дмитрий Ковальчук
+                    .reviews__post Основатель Loftschool
+              .reviews__item
+                blockquote.reviews__text.text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
+                .reviews__person
+                  .reviews__avatar
+                    .reviews__photo
+                      +image("content/reviews/vova.jpeg",'reviews__pic')
+                  .reviews__person-info
+                    .reviews__name Владимир Сабанцев
+                    .reviews__post Преподаватель Loftschool
+          section(id='Callback').callback.container
+            h2.callback__title.section-title Связаться со мной
+            form.callback__form
+              .callback__row
+                label.callback__label 
+                  span.callback__text Введите Ваше имя
+                  .callback__wrap
+                    +icon('user', 'callback__icon')
+                    input.callback__field(type='text' name='name' placeholder='Монастырский Вадим')
+                label.callback__label 
+                  span.callback__text Введите Ваш e-mail
+                  .callback__wrap
+                    +icon('email', 'callback__icon')
+                    input.callback__field(type='email' name='email' placeholder='vmonastyrskiy@ya.ru')
+              .callback__row
+                label.callback__label.callback__textarea
+                  span.callback__text Сообщение к письму
+                  .callback__wrap
+                    +icon('message', 'callback__icon')
+                    textarea.callback__field(type='text' name='name' placeholder='Требуется Ваша помощь в создании сайта. Интересуют сроки и цена вопроса')
+              button(type='submit').callback__btn Отправить
+        footer.footer
+          .container.footer__container
+            .footer__col
+              .footer__info
+                .footer__year &copy;  2019
+                .footer__author
+                  .footer__name Вадим Монастырский
+                  .footer__post Личный сайт веб-разработчика
+            .footer__col
+              .footer__menu  
+                include components/main-menu.pug
+                .footer__content
+                  .footer__about
+                    .footer__about-text Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool
+                    +socials('footer')
+                  .footer__qoute
+                    blockquote.footer__qoute-text Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает где вы живете
+                    .footer__qoute-author Martin Golding

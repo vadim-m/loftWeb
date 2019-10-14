@@ -1,0 +1,69 @@
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.skills-content {
+  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &__title {
+    margin-top: 250px;
+    margin-left: 7%;
+  }
+
+  &__text {
+    margin-top: 45px;
+    max-width: 599px;
+    opacity: 0.5;
+    line-height: 30px;
+    font-weight: 600;
+  }
+}
+
+.skills-content::before {
+  content: '';
+  position: absolute;
+  background-image: url('../images/content/backpack.png');
+  background-repeat: no-repeat;
+  bottom:0;
+  left:-510px;
+  width:700px;
+  height:630px;
+}  
+  
+
+
+.skills-content__circles {
+  display: flex;
+  margin-left: 21%;
+}
+
+.skills-content__frontend {
+  margin-top: 95px;
+
+}
+
+.skills-content__workflow {
+  margin-top: 48px;
+}
+
+.skills-content__frontend-title {
+  width: 100%;
+  font-size: 24px;
+  line-height: 48px;
+  color: #414c63;
+  font-weight: 700;
+  margin-left: 145px;
+}
+
+.skills-content__workflow-title {
+  width: 100%;
+  font-size: 24px;
+  line-height: 48px;
+  color: #414c63;
+  font-weight: 700;
+  margin-left: 145px;
+}

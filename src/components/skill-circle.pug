@@ -1,0 +1,22 @@
+mixin skillCircle(name,percent)
+  .skill-circle 
+    span.skill-circle__title=name
+    svg(class='skill-circle__percentage' viewBox="0 0 100 100" preserveAspectRatio="none")
+      linearGradient(id="gradient" x1="0%" y1="0%" x2="0%" y2="100%")
+        stop(offset="0%" stop-color="#9400ee")
+        stop(offset="100%" stop-color="#5500f2")
+      circle(cx='50' cy='50' r='40' class='skill-circle skill-circle__under')
+      circle(cx='50' cy='50' r='40' class='skill-circle skill-circle__above' style=`animation-delay: -${percent}s`)
+
+
+
+
+
+//- span.skill-circle__title Html
+//-   svg(class='skill-circle__percentage' viewBox="0 0 100 100" preserveAspectRatio="none")
+//-     linearGradient(id="gradient" x1="0%" y1="0%" x2="0%" y2="100%")
+//-       stop(offset="0%" stop-color="#9400ee")
+//-       stop(offset="100%" stop-color="#5500f2")
+//-     circle(cx='50' cy='50' r='40' class='skill-circle skill-circle__under')
+//-     circle(cx='50' cy='50' r='40' class='skill-circle skill-circle__above' style='animation-delay: -8s')
+                  

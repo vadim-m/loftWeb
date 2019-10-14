@@ -1,0 +1,10 @@
+.about-info
+  .about-info__photo
+    +image('content/me.jpeg','about-info__pic')
+  .about-info__data
+    table.table-info
+      -var data = [["Проживаю:", "Москва"],["Возраст:", "24"],["Родился:", "31 января 1995"]];
+        each item in data
+          tr.table-info__row
+            td.table-info__data= `${item[0]}`
+            td.table-info__data= `${item[1]}`
