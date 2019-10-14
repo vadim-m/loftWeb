@@ -1,0 +1,24 @@
+.skill-circle {
+  fill: transparent;
+  stroke-width: 5px;
+  stroke: #eaeaea;
+}
+
+.skill-circle__above {
+  stroke: url(#gradient);
+  stroke-width: 10px;
+  stroke-dasharray: 251;
+  stroke-dashoffset: 150;
+  animation: fill 100s linear infinite;
+  animation-play-state: paused;
+}
+
+@keyframes fill {
+  from {
+    stroke-dashoffset: 251;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
