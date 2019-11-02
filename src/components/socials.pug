@@ -1,7 +1,0 @@
-mixin socials(mod)
-  ul(class='socials socials--' + mod)
-    - var socialsItems = [{name: 'insta', href: 'https://www.instagram.com/tiestovadim/'}, {name: 'vk', href: 'https://vk.com/vad32'}, {name: 'gh', href: 'https://github.com/vadim-m'}];
-    each item in socialsItems
-      li.socials__item
-        a(href=item.href target="_blank").socials__link
-          +icon(`${item.name}`,'socials__icon')
