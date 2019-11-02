@@ -1,0 +1,151 @@
+.callback__container  {
+  margin-top: 95px;
+}
+
+.callback__form {
+  margin-top: 95px;
+  margin-bottom: 0;
+  max-width: 860px;
+  padding-bottom: 130px;
+
+  @include phones {
+    margin-top: 35px;
+    padding-bottom: 95px;
+  }
+}
+
+.callback__row {
+  display: flex;
+  width: 100%;
+  margin-top: 40px;
+  justify-content: space-between;
+
+  @include phones {
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+}
+
+.callback__title {
+  @include tablets {
+    text-align: center;
+  }
+}
+
+
+.callback__field {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+  resize: none;
+  line-height: 36px;
+}
+
+.callback__label{
+  width: 100%;
+  font-size: 16px;
+  max-width: 400px;
+  font-weight: 600;
+  
+  ::placeholder {
+    font-size: 18px;
+    color: black;
+    font-weight: 700;
+
+    @include phones {
+      font-size: 14px;
+      line-height: 30px;
+    }
+  }
+
+  // ::-webkit-input-placeholder {
+  //  font-size: 18px;
+  //  color: black;
+  //  font-weight: 700;
+  // }
+
+  // :-moz-placeholder { /* Firefox 18- */
+  //  font-size: 18px;
+  //  color: black;  
+  //  font-weight: 700;
+  // }
+
+  // ::-moz-placeholder {  /* Firefox 19+ */
+  //  font-size: 18px;
+  //  color: black;  
+  //  font-weight: 700;
+  // }
+
+  // :-ms-input-placeholder {  
+  //  font-size: 18px; 
+  //  color: black;  
+  //  font-weight: 700;
+  // }
+
+  @include tablets {
+    font-size: 14px;
+  }
+
+  @include phones {
+    margin-top: 30px;
+  }
+}
+
+.callback__icon {
+  display: inline-block;
+  width: 30px;
+  height: 25px;
+}
+
+.callback__text {
+  display: inline-block;
+  margin-left: 43px;
+  opacity: 0.3;
+}
+
+.callback__icon {
+  opacity: 0.3;
+}
+
+.callback__wrap {
+  display: flex;
+  border-bottom: 2px solid black;
+  align-items: center;
+}
+
+.callback__textarea {
+  width: 100%;
+  max-width: none;
+  
+  @include phones {
+    margin-top: 0;
+  }
+}
+
+.callback__btn {
+  display: block;
+  margin-top: 55px;
+  padding: 30px 120px;
+  background: linear-gradient(to right, #9100ef, #5500f2);
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-top-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+
+  &:hover {
+    color: #f29400;
+    text-decoration: underline;
+  }
+
+  @include tablets {
+    margin: 30px auto 0 auto;
+  }
+
+  @include phones {
+    padding: 25px 80px;
+  }
+}

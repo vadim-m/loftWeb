@@ -1,6 +1,9 @@
 {
   "text-color": "#414c63",
   "links-color": "#4b6fd7",
+  "main-color": "#5500f2",
+  "herf-color": "#4b6fd7",
+  "href-color": "#4b6fd7",
   "bp-desktop-hd": "1800px",
   "bp-desktop": "1200px",
   "bp-tablets": "768px",

@@ -1,0 +1,162 @@
+.footer {
+  background-color: #1f232d;
+  color: #fff;
+}
+
+.footer__container {
+  display: grid;
+  padding: 100px 0;
+  grid-template: "left right" 1fr / 30% 70%;
+  // grid-gap: 0 1%;
+
+  @include phones {
+    grid-template: 
+      "left"  1fr
+      "right" 2fr 
+      / 1fr;
+  }
+}
+
+// left footer part
+
+.footer__left {
+  display: grid;
+  grid-area: left;
+}
+
+.footer__info {
+  display: grid;
+  grid-template: "year author" 1fr / 50% 50%;
+
+  @include desktop {
+    grid-template: 
+    "year" 1fr
+    "author" 3fr 
+    / 1fr;
+  }
+  
+  @include phones {
+    grid-template: 
+    "year" 70px
+    "author" 70px 
+    / 1fr;
+  }
+}
+
+.footer__author {
+  grid-area: author;
+  // margin-left: 60px;
+  max-width: 165px;
+
+
+}
+
+.footer__name {
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.footer__post {
+  margin-top: 30px;
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 400;
+  opacity: 0.15;
+}
+
+.footer__year {
+  line-height: 48px;
+  font-size: 48px;
+  font-weight: 600;
+  white-space: nowrap;
+  opacity: 0.1;
+}
+
+// right footer part
+
+.footer__right {
+  display: grid;
+  grid-area: right;
+  grid-template: 
+    "menu" 100px
+    "content" 2fr
+    / 1fr;
+    
+}
+
+.footer__menu {
+  grid-area: menu;
+
+  .main-menu__list {
+    @include tablets {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+  }
+
+  .main-menu__item {
+    @include tablets {
+      width: 25%;
+      line-height: 30px
+    }
+    
+    @include phones {
+      width: 50%;
+      padding: 4px 0;
+    }
+  }
+}
+
+.footer__content {
+  grid-area: content;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "about quote";
+  // grid-gap: 0 1%;
+
+  @include tablets {
+    grid-template: 
+    "about" 1fr
+    "quote" 1fr
+    / 1fr;
+  }
+}
+
+.footer__about {
+  grid-area: about;
+  max-width: 310px;
+  margin-top: 60px;
+}
+
+.footer__about-text {
+  font-size: 16px;
+  line-height: 30px;
+  color: #ffffff;
+  font-weight: 400;
+  opacity: 0.3;
+}
+
+
+.footer__qoute {
+  grid-area: quote;
+  max-width: 420px;
+}
+
+.footer__qoute-text {
+  opacity: 0.3;
+  margin-top: 60px;
+  max-width: 420px;
+  line-height: 30px;
+  font-weight: 400;
+}
+
+.footer__qoute-author {
+  margin-top: 15px;
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 400;
+  font-style: italic;
+}
