@@ -1,4 +1,5 @@
 .main-menu {
+  width: 100%;
   font-size: 16px;
   line-height: 1.875;
   font-weight: 400;
@@ -6,10 +7,13 @@
 
 .main-menu__list {
   display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .main-menu__item {
-  margin-left: 52px;
+  // margin-left: 52px;
+  white-space: nowrap;
 
   &:hover {
     color: $main-color;

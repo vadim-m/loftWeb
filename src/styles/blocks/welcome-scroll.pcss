@@ -1,14 +1,17 @@
 .welcome-scroll {
-  margin-top: 325px;
   display: flex;
+  padding-bottom: 5px;
 
   &:hover {
     color: $main-color;
 
-  .welcome-scroll__pic {
-    fill: $main-color;
+    .welcome-scroll__pic {
+      fill: $main-color;
+    }
   }
 
+  @include phones {
+    display: none;
   }
 }
 

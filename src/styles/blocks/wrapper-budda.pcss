@@ -1,6 +1,10 @@
 .wrapper-budda {
-  background-image: url('../images/content/budda-bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   clip-path: polygon(0 0, 50% 5%, 100% 0, 100% 100%, 0% 100%);
+  background-image: url('../images/content/budda-bg-hd.jpg');
+
+  @include tablets {
+    background-image: url('../images/content/budda-bg.jpg');
+  }
 }

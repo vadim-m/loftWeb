@@ -1,25 +1,19 @@
-.skill-circle {
-  margin-top: 38px;
-  margin-left: 10%;
+.skill {
   position: relative;
-  height: 134px;
-  width: 134px;
+  height: 168px;
+  width: 168px;
   
-  &:first-child {
-    margin-left: 0;
+  @include phones {
+    height: 132px;
+    width: 132px;
   }
 }
 
-
 .skill-circle__percentage {
-  display: inline-block;
-  height: 134px;
-  width: 134px;
   transform: rotate(180deg);
 }
 
 .skill-circle__title {
-  display: inline-block;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -28,4 +22,29 @@
   line-height: 30px;
   font-weight: 700;
   opacity: 0.5;
+}
+
+.skill-circle {
+  fill: transparent;
+  stroke-width: 5px;
+  stroke: #eaeaea;
+}
+
+.skill-circle__above {
+  stroke: url(#gradient);
+  stroke-width: 12px;
+  stroke-dasharray: 251;
+  stroke-dashoffset: 150;
+  animation: fill 100s linear infinite;
+  animation-play-state: paused;
+}
+
+@keyframes fill {
+  from {
+    stroke-dashoffset: 251;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
 }

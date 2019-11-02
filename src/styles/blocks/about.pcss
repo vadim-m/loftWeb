@@ -1,8 +1,14 @@
 .about-content {
+  position: relative;
   display: flex;
-  padding-top: 175px;
+  padding-top: 210px;
   padding-bottom: 165px;
   justify-content: center;
+
+  @include phones {
+    flex-direction: column;
+    padding-top: 105px;
+  }
 }
 
 .about-info {
@@ -24,31 +30,49 @@
     font-weight: 600;
     display: flex;
   }
+
+  @include phones {
+    align-items: center;
+  }
 }
 
 .about-desc {
   max-width: 565px;
   margin-left: 160px;
-
+  
   &__welcome {
     font-size: 16px;
     line-height: 30px;
     opacity: 0.5;
   }
-
+  
   &__title {
     margin-top: 14px;
   }
-
+  
   &__info {
     margin-top: 28px;
     opacity: 0.5;
   }
-
+  
   &__text {
     margin-top: 92px;
     opacity: 0.5;
     font-weight: 400;
     font-style: italic;
+
+    @include tablets {
+      margin-top: 60px;
+    }
+  }
+  
+  @include tablets {
+    max-width: 365px;
+    
+  }
+
+  @include phones {
+    margin-left: 0;
+    margin-top: 50px;
   }
 }

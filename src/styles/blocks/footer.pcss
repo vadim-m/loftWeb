@@ -4,32 +4,51 @@
 }
 
 .footer__container {
-  display: flex;
+  display: grid;
   padding: 100px 0;
-  
+  grid-template: "left right" 1fr / 30% 70%;
+  // grid-gap: 0 1%;
+
+  @include phones {
+    grid-template: 
+      "left"  1fr
+      "right" 2fr 
+      / 1fr;
+  }
 }
 
-.footer__col {
-  display: flex;
-  flex-wrap: wrap;
-}
+// left footer part
 
-.footer__menu {
-  margin-left: 140px;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.footer__content {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
+.footer__left {
+  display: grid;
+  grid-area: left;
 }
 
 .footer__info {
-  display: flex;
-  flex-basis: content;
+  display: grid;
+  grid-template: "year author" 1fr / 50% 50%;
+
+  @include desktop {
+    grid-template: 
+    "year" 1fr
+    "author" 3fr 
+    / 1fr;
+  }
+  
+  @include phones {
+    grid-template: 
+    "year" 70px
+    "author" 70px 
+    / 1fr;
+  }
+}
+
+.footer__author {
+  grid-area: author;
+  // margin-left: 60px;
+  max-width: 165px;
+
+
 }
 
 .footer__name {
@@ -37,11 +56,6 @@
   line-height: 30px;
   text-transform: uppercase;
   font-weight: 700;
-}
-
-.footer__author {
-  margin-left: 60px;
-  max-width: 165px;
 }
 
 .footer__post {
@@ -60,7 +74,59 @@
   opacity: 0.1;
 }
 
+// right footer part
+
+.footer__right {
+  display: grid;
+  grid-area: right;
+  grid-template: 
+    "menu" 100px
+    "content" 2fr
+    / 1fr;
+    
+}
+
+.footer__menu {
+  grid-area: menu;
+
+  .main-menu__list {
+    @include tablets {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+  }
+
+  .main-menu__item {
+    @include tablets {
+      width: 25%;
+      line-height: 30px
+    }
+    
+    @include phones {
+      width: 50%;
+      padding: 4px 0;
+    }
+  }
+}
+
+.footer__content {
+  grid-area: content;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "about quote";
+  // grid-gap: 0 1%;
+
+  @include tablets {
+    grid-template: 
+    "about" 1fr
+    "quote" 1fr
+    / 1fr;
+  }
+}
+
 .footer__about {
+  grid-area: about;
   max-width: 310px;
   margin-top: 60px;
 }
@@ -75,6 +141,7 @@
 
 
 .footer__qoute {
+  grid-area: quote;
   max-width: 420px;
 }
 

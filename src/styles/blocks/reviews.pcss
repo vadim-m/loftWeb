@@ -2,6 +2,30 @@
   padding-top: 215px;
   display: flex;
   flex-wrap: wrap;
+
+  @include phones {
+    padding-top: 110px;
+  }
+}
+
+.reviews-slider__container {
+  margin-top: 85px;
+  width: 100%;
+  max-width: 1050px;
+}
+
+.reviews-slider__wrapper {
+  width: 100%;
+}
+
+.reviews__title__container {
+  display: flex;
+
+  @include phones {
+    // flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .reviews__photo {
@@ -9,11 +33,16 @@
   max-height: 75px;
   border-radius: 50%;
   overflow: hidden;
-  
 }
 
 .reviews__controls {
   margin-left: 65px;
+  
+  @include phones {
+    margin-top: 25px;
+    margin-left: -30px;
+    
+  }
 }
 
 .reviews__button {
@@ -50,45 +79,70 @@
   }
 }
 
+// slider CSS
+
+.reviews__list {
+  // display: flex; для слайдера убрал
+}
+
 .reviews__item {
-  display: flex;
+  min-height: 100%;
+  display: flex; 
   flex-direction: column;
   justify-content: space-between;
   position: relative;
+  width: 50%;
+  padding-left: 75px;
 
   &::before {
     opacity: 0.15;
     position: absolute;
     content: '';
     top: 0;
-    left: -80px;
+    left: 0;
     width: 75px;
     height: 65px;
     background: svg-load('quote.svg', fill=#414c63, width=100%, height=100%);
     background-repeat: no-repeat;
+
+    @include tablets {
+      width: 40px;
+      height: 30px;
+    }
+
+    @include phones {
+      display: none;
+    }
+  }
+
+  @include tablets {
+    padding-left: 40px;
+  }
+  
+  @include phones {
+    width: 100%;
+    padding-left: 0;
   }
 }
 
-.reviews-content {
-  margin-top: 85px;
-  display: flex;
-  width: 100%;
-  max-width: 1050px;
-  justify-content: space-around;
-}
-
 .reviews__text {
-  max-width: 305px;
+  max-width: 335px;
   opacity: 0.5;
 }
 
 .reviews__person {
-  margin-top: 10px;
+  padding-top: 10px;
   display: flex;
+}
+
+.reviews__avatar {
+  width: 75px;
+  height: 75px;
 }
 
 .reviews__person-info {
   margin-left: 30px;
+  padding-bottom: 25px;
 }
 
 .reviews__name {

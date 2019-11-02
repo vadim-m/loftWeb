@@ -1,7 +1,17 @@
+.callback__container  {
+  margin-top: 95px;
+}
+
 .callback__form {
   margin-top: 95px;
+  margin-bottom: 0;
   max-width: 860px;
   padding-bottom: 130px;
+
+  @include phones {
+    margin-top: 35px;
+    padding-bottom: 95px;
+  }
 }
 
 .callback__row {
@@ -9,11 +19,19 @@
   width: 100%;
   margin-top: 40px;
   justify-content: space-between;
+
+  @include phones {
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
 }
 
 .callback__title {
-  margin-top: 200px;
+  @include tablets {
+    text-align: center;
+  }
 }
+
 
 .callback__field {
   width: 100%;
@@ -31,32 +49,48 @@
   max-width: 400px;
   font-weight: 600;
   
+  ::placeholder {
+    font-size: 18px;
+    color: black;
+    font-weight: 700;
 
-  ::-webkit-input-placeholder {
-   font-size: 18px;
-   color: black;
-   font-weight: 700;
+    @include phones {
+      font-size: 14px;
+      line-height: 30px;
+    }
   }
 
-  :-moz-placeholder { /* Firefox 18- */
-   font-size: 18px;
-   color: black;  
-   font-weight: 700;
+  // ::-webkit-input-placeholder {
+  //  font-size: 18px;
+  //  color: black;
+  //  font-weight: 700;
+  // }
+
+  // :-moz-placeholder { /* Firefox 18- */
+  //  font-size: 18px;
+  //  color: black;  
+  //  font-weight: 700;
+  // }
+
+  // ::-moz-placeholder {  /* Firefox 19+ */
+  //  font-size: 18px;
+  //  color: black;  
+  //  font-weight: 700;
+  // }
+
+  // :-ms-input-placeholder {  
+  //  font-size: 18px; 
+  //  color: black;  
+  //  font-weight: 700;
+  // }
+
+  @include tablets {
+    font-size: 14px;
   }
 
-  ::-moz-placeholder {  /* Firefox 19+ */
-   font-size: 18px;
-   color: black;  
-   font-weight: 700;
+  @include phones {
+    margin-top: 30px;
   }
-
-  :-ms-input-placeholder {  
-   font-size: 18px; 
-   color: black;  
-   font-weight: 700;
-  }
-
-
 }
 
 .callback__icon {
@@ -85,9 +119,13 @@
   width: 100%;
   max-width: none;
   
+  @include phones {
+    margin-top: 0;
+  }
 }
 
 .callback__btn {
+  display: block;
   margin-top: 55px;
   padding: 30px 120px;
   background: linear-gradient(to right, #9100ef, #5500f2);
@@ -101,5 +139,13 @@
   &:hover {
     color: #f29400;
     text-decoration: underline;
+  }
+
+  @include tablets {
+    margin: 30px auto 0 auto;
+  }
+
+  @include phones {
+    padding: 25px 80px;
   }
 }
