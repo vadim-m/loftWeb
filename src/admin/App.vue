@@ -1,3 +1,17 @@
 <template lang="pug">
-  h1 Welcome to the Vue App
+  .page-template
+    router-view
 </template>
+
+<script>
+import page from './page';
+import login from './login';
+
+export default {
+  name: 'app',
+  components: {
+    page, login
+  },
+}
+</script>
+

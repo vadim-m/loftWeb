@@ -76,18 +76,18 @@ html(lang="ru")
                   span.callback__text Введите Ваше имя
                   .callback__wrap
                     +icon('user', 'callback__icon')
-                    input.callback__field(type='text' name='name' placeholder='Монастырский Вадим')
+                    input.callback__field(type='text' name='name' required placeholder='Монастырский Вадим')
                 label.callback__label 
                   span.callback__text Введите Ваш e-mail
                   .callback__wrap
                     +icon('email', 'callback__icon')
-                    input.callback__field(type='email' name='email' placeholder='vmonastyrskiy@ya.ru')
+                    input.callback__field(type='email' name='email' required placeholder='vmonastyrskiy@ya.ru')
               .callback__row
                 label.callback__label.callback__textarea
                   span.callback__text Сообщение к письму
                   .callback__wrap
                     +icon('message', 'callback__icon')
-                    textarea.callback__field(type='text' name='name' placeholder='Требуется Ваша помощь в создании сайта. Интересуют сроки и цена вопроса')
+                    textarea.callback__field(type='text' name='name' required placeholder='Требуется Ваша помощь в создании сайта. Интересуют сроки и цена вопроса')
               button(type='submit').callback__btn Отправить
        
         footer.footer
