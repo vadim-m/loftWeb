@@ -1,0 +1,61 @@
+.welcome {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcome__title {
+  // margin-top: 305px;
+  font-size: 18px;
+  line-height: 1.667;
+  font-weight: 600;
+  text-align: center;
+  max-width: 160px;
+  opacity: 0.4;
+
+  @include desktop {
+    text-align: end;
+  }
+  
+  @include tablets {
+    font-size: 16px;
+    text-align: center;
+  }
+
+}
+
+.welcome__main-title {
+  margin-top: 22px;
+  font-size: 72px;
+  line-height: 0.833333333;
+  font-weight: 800;
+  text-align: center;
+  max-width: 700px;
+  
+  @include tablets{
+    font-size: 48px;
+    max-width: 430px;
+  }
+  
+  @include phones {
+    font-size: 34px;
+  }
+}
+
+.welcome__content {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+  @include desktop {
+    flex-direction: row;
+  }
+  
+  @include tablets {
+    flex-direction: column;
+    
+  }
+}

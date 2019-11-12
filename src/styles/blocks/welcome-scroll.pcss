@@ -1,0 +1,29 @@
+.welcome-scroll {
+  display: flex;
+  padding-bottom: 5px;
+
+  &:hover {
+    color: $main-color;
+
+    .welcome-scroll__pic {
+      fill: $main-color;
+    }
+  }
+
+  @include phones {
+    display: none;
+  }
+}
+
+.welcome-scroll__pic {
+  height: 30px;
+  width: 30px;
+  object-fit: cover;
+  margin-left: 10px;
+}
+
+.welcome-scroll__text {
+  font-size: 18px;
+  line-height: 1.667;
+  font-weight: 600;
+}

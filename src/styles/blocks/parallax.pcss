@@ -1,0 +1,92 @@
+.parallax {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  @include tablets {
+    display: none;
+  }
+}
+
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+
+  
+  // небо - фон
+  &:nth-child(1) {
+    .parallax__image {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+  // горы
+  &:nth-child(2) {
+    .parallax__image {
+      right: 0;
+      top: 360px;
+
+      @include desktop {
+        top: 390px;
+      }
+    }
+  }
+  // шарик
+  &:nth-child(3) {
+    .parallax__image {
+      left: 50%;
+      top: 540px;
+      margin-left: 15%;
+    }
+  }
+  // облака по цетнру 
+  &:nth-child(4) {
+    .parallax__image {
+      left: 0;
+      top: 560px;
+    }
+  }
+  // человек слева
+  &:nth-child(5) {
+    .parallax__image {
+      left: 0;
+      top: 610px;
+
+      @include desktop {
+        top: initial;
+        bottom: -200px;
+      }
+    }
+  }
+  // гора справа
+  &:nth-child(6) {
+    .parallax__image {
+      right: 0;
+      bottom: 0;
+      
+      @include desktop {
+        bottom: -200px;
+      }
+    }
+  } 
+  // нижнние облака
+  &:nth-child(7) {
+    .parallax__image {
+      left: 0;
+      bottom: -500px;
+
+      
+    }
+  }
+}
+
+.parallax__image {
+  position: absolute;
+}
